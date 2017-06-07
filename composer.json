@@ -1,0 +1,32 @@
+{
+    "name": "divante-ltd/pimcore-elasticsearch-plugin",
+    "type": "pimcore-plugin",
+    "require": {
+        "php": ">=7",
+        "pimcore/installer-plugin": ">=1",
+        "elasticsearch/elasticsearch": ">=5",
+        "ongr/elasticsearch-dsl": ">=5"
+    },
+    "authors": [
+        {
+            "name": "DivanteLtd",
+            "email":  "pimcore@divante.pl",
+            "homepage": "http://divante.co"
+        },
+        {
+            "name": "Bartosz Idzikowski",
+            "email":  "bidzikowski@divante.pl",
+            "role": "Developer"
+        },
+        {
+            "name": "Kamil Karkus",
+            "email":  "kkarkus@divante.pl",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DivanteLtd\\PimcoreElasticsearchPlugin\\": "lib"
+        }
+    }
+}
