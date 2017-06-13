@@ -7,6 +7,7 @@
         "elasticsearch/elasticsearch": ">=5",
         "ongr/elasticsearch-dsl": ">=5"
     },
+    "license": "GPL-3.0+",
     "keywords": [ "pimcore", "elasticsearch", "plugin" ],
     "authors": [
         {
