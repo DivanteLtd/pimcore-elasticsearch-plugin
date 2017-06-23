@@ -10,4 +10,7 @@ return [
     'DivanteLtd\PimcoreElasticsearchPlugin\Indexer\Service\IndexerRegisterService' => DI\object(
         'DivanteLtd\PimcoreElasticsearchPlugin\Indexer\Service\IndexerRegisterService'
     ),
+    'DivanteLtd\PimcoreElasticsearchPlugin\Indexer\Service\IndexerService' => DI\object(
+        'DivanteLtd\PimcoreElasticsearchPlugin\Indexer\Service\IndexerService'
+    ),
 ];

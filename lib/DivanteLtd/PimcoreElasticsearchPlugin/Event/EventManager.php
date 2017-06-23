@@ -22,9 +22,6 @@ class EventManager
     /** @var \Zend_EventManager_EventManager */
     protected $eventManager;
 
-    /** @var IndexerService */
-    protected $indexerService;
-
     /**
      * EventManager constructor.
      * @param \Zend_EventManager_EventManager $eventManager
@@ -32,7 +29,6 @@ class EventManager
     public function __construct(\Zend_EventManager_EventManager $eventManager)
     {
         $this->eventManager   = $eventManager;
-        $this->indexerService = new IndexerService();
     }
 
     /**
@@ -64,6 +60,7 @@ class EventManager
      */
     public function saveIndex(\Zend_EventManager_Event $event)
     {
+        $indexerService = $this->getIndexerService();
         $element = $event->getTarget();
 
         if (!($element instanceof AbstractElement)) {
@@ -71,11 +68,11 @@ class EventManager
         }
 
         if (!($element instanceof Asset) && !$element->getPublished()) {
-            $this->indexerService->delete($element);
+            $indexerService->delete($element);
             return;
         }
 
-        $this->indexerService->save($element);
+        $indexerService->save($element);
     }
 
     /**
@@ -83,12 +80,23 @@ class EventManager
      */
     public function deleteIndex(\Zend_EventManager_Event $event)
     {
+        $indexerService = $this->getIndexerService();
         $element = $event->getTarget();
 
         if (!($element instanceof AbstractElement)) {
             return;
         }
 
-        $this->indexerService->delete($element);
+        $indexerService->delete($element);
+    }
+
+    /**
+     * @return IndexerService
+     */
+    protected function getIndexerService()
+    {
+        return \Pimcore::getDiContainer()->get(
+            'DivanteLtd\PimcoreElasticsearchPlugin\Indexer\Service\IndexerService'
+        );
     }
 }
