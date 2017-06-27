@@ -64,6 +64,10 @@ class IndexerService
                 continue;
             }
 
+            if (!$this->elasticSearchService->exists($indexer->getIndexName(), $indexer->getType(), $element)) {
+                continue;
+            }
+
             $this->elasticSearchService->delete($indexer->getIndexName(), $indexer->getType(), $element);
         }
     }
