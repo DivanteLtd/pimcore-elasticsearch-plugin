@@ -67,7 +67,7 @@ class EventManager
             return;
         }
 
-        if (!($element instanceof Asset) && !$element->getPublished()) {
+        if (!($element instanceof Asset) && method_exists($element, 'getPublished') && !$element->getPublished()) {
             $indexerService->delete($element);
             return;
         }
