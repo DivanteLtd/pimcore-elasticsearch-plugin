@@ -1,5 +1,6 @@
 {
     "name": "divante-ltd/pimcore-elasticsearch-plugin",
+    "description": "Flexible ElasticSearch Plugin for Pimcore - now with DSL!",
     "type": "pimcore-plugin",
     "require": {
         "php": ">=7",
