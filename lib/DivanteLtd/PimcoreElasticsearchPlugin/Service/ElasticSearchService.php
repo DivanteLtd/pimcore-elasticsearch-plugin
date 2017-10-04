@@ -204,9 +204,21 @@ class ElasticSearchService
         if (!isset($results["hits"]["hits"])) {
             return $ret;
         }
+        return $this->arrayToObjects($results['hits']['hits']);
+    }
+
+    /**
+     * @param array $hits
+     *
+     * @return object[]
+     * @throws \Exception
+     */
+    public function arrayToObjects(array $hits)
+    {
+        $ret = [];
 
         /** @var array $result */
-        foreach ($results['hits']['hits'] as $result) {
+        foreach ($hits as $result) {
             $id = $this->elementService->extractId($result['_id']);
             $elementType = $this->elementService->extractElementType($result['_id']);
 
