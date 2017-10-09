@@ -15,6 +15,7 @@ use Pimcore\Model\Asset\Listing as AssetsListing;
 use Pimcore\Model\Document\Listing as DocListing;
 use Pimcore\Model\Element\AbstractElement;
 use Pimcore\Model\Listing\AbstractListing;
+use Pimcore\Model\Object\AbstractObject;
 use Pimcore\Model\Object\Listing as ObjListing;
 use Symfony\Component\Console\Helper\ProgressBar;
 use Symfony\Component\Console\Input\InputInterface;
@@ -261,7 +262,7 @@ class ReIndexAllCommand extends AbstractCommand
     protected function getObjectsListing(): ObjListing
     {
         $listing = new ObjListing();
-        $listing->setCondition('o_type != ?', 'folder');
+        $listing->setObjectTypes([AbstractObject::OBJECT_TYPE_VARIANT, AbstractObject::OBJECT_TYPE_OBJECT]);
 
         return $listing;
     }
