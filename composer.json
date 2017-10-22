@@ -6,9 +6,8 @@
         "php": ">=7",
         "pimcore/installer-plugin": ">=1",
         "elasticsearch/elasticsearch": "~2.0",
-        "ongr/elasticsearch-dsl": "2.x-dev"
+        "ongr/elasticsearch-dsl": "2.2.*"
     },
-    "minimum-stability": "dev",
     "license": "GPL-3.0+",
     "keywords": [ "pimcore", "elasticsearch", "plugin" ],
     "authors": [
