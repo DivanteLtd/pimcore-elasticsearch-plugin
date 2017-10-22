@@ -4,7 +4,7 @@
 
 - PHP 7 or newer
 - Pimcore 4
-- Elasticsearch 5
+- Elasticsearch 2.x
 - Composer
 
 ## Installation
@@ -182,4 +182,4 @@ $search
 $results = $elasticSearchService->find('newsType', $search);
 ```
 
-For more examples take a look here: http://docs.ongr.io/ElasticsearchDSL
+For more examples take a look here: https://github.com/ongr-io/ElasticsearchDSL/tree/2.x/docs
