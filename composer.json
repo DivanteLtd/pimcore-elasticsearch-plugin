@@ -8,6 +8,7 @@
         "elasticsearch/elasticsearch": "~2.0",
         "ongr/elasticsearch-dsl": "2.x-dev"
     },
+    "minimum-stability": "dev",
     "license": "GPL-3.0+",
     "keywords": [ "pimcore", "elasticsearch", "plugin" ],
     "authors": [
