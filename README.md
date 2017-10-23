@@ -183,3 +183,13 @@ $results = $elasticSearchService->find('newsType', $search);
 ```
 
 For more examples take a look here: https://github.com/ongr-io/ElasticsearchDSL/tree/2.x/docs
+
+
+## About Authors
+
+
+![Divante-logo](http://divante.co///logo_1.png "Divante")
+
+We are a Software House from Europe, headquartered in Poland and employing about 150 people. Our core competencies are built around Magento, Pimcore and bespoke software projects (we love Symfony3, Node.js, Angular, React, Vue.js). We specialize in sophisticated integration projects trying to connect hardcore IT with good product design and UX.
+
+Visit our website [Divante.co](https://divante.co/ "Divante.co") for more information.
